@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using FMODUnity;
 
 public class PlayerMovement : MonoBehaviour {
     Rigidbody2D rb;
@@ -57,6 +58,11 @@ public class PlayerMovement : MonoBehaviour {
     float justPressedGrabTimer;
 
     bool playedGameOverSound = false;
+
+    public FMODUnity.EventReference jumpSound;
+    public FMODUnity.EventReference pickupSound;
+    public FMODUnity.EventReference throwSound;
+    public FMODUnity.EventReference landSound;
 
     void Start () {
         baseHeight = spr.transform.localScale.y;
@@ -175,7 +181,9 @@ public class PlayerMovement : MonoBehaviour {
             } else {
                 //throw block
                 //NewSound
-                AudioDirector.Instance.PlaySound(AudioDirector.Instance.throwSound, true, transform.position.x, AudioDirector.Instance.throwVolume, 0.2f);
+                FMODUnity.RuntimeManager.PlayOneShot(throwSound);
+
+                //AudioDirector.Instance.PlaySound(AudioDirector.Instance.throwSound, true, transform.position.x, AudioDirector.Instance.throwVolume, 0.2f);
 
                 grabbedBlock.pickedUp = false;
                 grabbedBlock.rb.isKinematic = false;
@@ -223,8 +231,10 @@ public class PlayerMovement : MonoBehaviour {
         block.rb.velocity = Vector2.zero;
 
         //NewSound
-        AudioDirector.Instance.PlaySound(AudioDirector.Instance.pickupSound, true, transform.position.x, AudioDirector.Instance.pickupVolume, 0.2f);
-        
+        FMODUnity.RuntimeManager.PlayOneShot(pickupSound);
+
+        //AudioDirector.Instance.PlaySound(AudioDirector.Instance.pickupSound, true, transform.position.x, AudioDirector.Instance.pickupVolume, 0.2f);
+
     }
     void GetPushed(float x) {
         justPushedTimer = .2f;
@@ -254,7 +264,9 @@ public class PlayerMovement : MonoBehaviour {
             //Landing
 
             //NewSound
-            AudioDirector.Instance.PlaySound(AudioDirector.Instance.landSound, true, transform.position.x, AudioDirector.Instance.landVolume, 0.1f);
+            FMODUnity.RuntimeManager.PlayOneShot(landSound);
+
+            //AudioDirector.Instance.PlaySound(AudioDirector.Instance.landSound, true, transform.position.x, AudioDirector.Instance.landVolume, 0.1f);
        
             //wiggleSpd -= .1f;
             blockJumped = false;
@@ -266,7 +278,8 @@ public class PlayerMovement : MonoBehaviour {
             //jumping
 
             //NewSound
-            AudioDirector.Instance.PlaySound(AudioDirector.Instance.jumpSound, true, transform.position.x, AudioDirector.Instance.jumpVolume, 0.1f);
+            FMODUnity.RuntimeManager.PlayOneShot(jumpSound);
+            //AudioDirector.Instance.PlaySound(AudioDirector.Instance.jumpSound, true, transform.position.x, AudioDirector.Instance.jumpVolume, 0.1f);
 
             jumpDust.Play();
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
