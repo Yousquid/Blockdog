@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using FMODUnity;
 public class Grid : MonoBehaviour {
     public GridCell[,] grid;
     public int gridHeight;
@@ -22,7 +22,11 @@ public class Grid : MonoBehaviour {
     public TextMesh highScoreText;
     public SpriteRenderer indicator;
     public GameObject wallCollider;
+    public FMODUnity.EventReference preparSound;
+    public FMODUnity.EventReference blockdropSound;
 
+    FMOD.Studio.EventInstance dropInstance;
+    FMOD.Studio.PARAMETER_ID dropStrengthID;
 
     //newAudio
     bool warningLoopOn = false;
@@ -32,6 +36,14 @@ public class Grid : MonoBehaviour {
         me = this;
     }
     void Start () {
+
+        dropInstance = FMODUnity.RuntimeManager.CreateInstance(blockdropSound);
+
+        FMOD.Studio.EventDescription jumpSoundDescription;
+        dropInstance.getDescription(out jumpSoundDescription);
+        FMOD.Studio.PARAMETER_DESCRIPTION jumpSoundStrengthPramaterDescription;
+        jumpSoundDescription.getParameterDescriptionByName("Drop_Volume", out jumpSoundStrengthPramaterDescription);
+        dropStrengthID = jumpSoundStrengthPramaterDescription.id;
 
         warningLoopOn = false;
         playedGameOverSound = false;
@@ -144,13 +156,26 @@ public class Grid : MonoBehaviour {
         bloop.GetComponent<SpriteRenderer>().color = Global.me.blockColors[num];
 
         //NewSound
-        AudioDirector.Instance.PlaySound(AudioDirector.Instance.blockPrepareDrop, true, bloop.transform.position.x, AudioDirector.Instance.blockPrepVolume);
+        FMODUnity.RuntimeManager.PlayOneShot(preparSound);
+        //AudioDirector.Instance.PlaySound(AudioDirector.Instance.blockPrepareDrop, true, bloop.transform.position.x, AudioDirector.Instance.blockPrepVolume);
 
         yield return new WaitForSeconds(.5f);
         Instantiate(block, pos, Quaternion.identity).GetComponent<FallingBlock>().colNum = num;
 
         //NewSound
-        AudioDirector.Instance.PlaySound(AudioDirector.Instance.blockDrop, true, bloop.transform.position.x, AudioDirector.Instance.blockDropVolume);
+        //FMODUnity.RuntimeManager.PlayOneShot(blockdropSound);
+        //AudioDirector.Instance.PlaySound(AudioDirector.Instance.blockDrop, true, bloop.transform.position.x, AudioDirector.Instance.blockDropVolume);
+        dropInstance.setParameterByID(dropStrengthID, Random.Range(0F, 1F));
+        if (dropInstance.isValid())
+        {
+            FMOD.Studio.PLAYBACK_STATE playbackstate;
+            dropInstance.getPlaybackState(out playbackstate);
+            if (playbackstate == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+            {
+                dropInstance.start();
+            }
+        }
+
 
         yield return new WaitForSeconds(.2f);
         Destroy(bloop);

@@ -63,7 +63,9 @@ public class PlayerMovement : MonoBehaviour {
     public FMODUnity.EventReference pickupSound;
     public FMODUnity.EventReference throwSound;
     public FMODUnity.EventReference landSound;
-
+    public FMODUnity.EventReference gameoverSound;
+    FMOD.Studio.EventInstance jumpInstance;
+    FMOD.Studio.PARAMETER_ID jumpSoundStrengthID;
     void Start () {
         baseHeight = spr.transform.localScale.y;
         baseWidth = spr.transform.localScale.x;
@@ -71,7 +73,14 @@ public class PlayerMovement : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
         playedGameOverSound = false;
-	}
+        jumpInstance = FMODUnity.RuntimeManager.CreateInstance(jumpSound);
+
+        FMOD.Studio.EventDescription jumpSoundDescription;
+        jumpInstance.getDescription(out jumpSoundDescription);
+        FMOD.Studio.PARAMETER_DESCRIPTION jumpSoundStrengthPramaterDescription;
+        jumpSoundDescription.getParameterDescriptionByName("Jump_Strength", out jumpSoundStrengthPramaterDescription);
+        jumpSoundStrengthID = jumpSoundStrengthPramaterDescription.id;
+    }
 	
 	void Update () {
         //Time.timeScale = ((rb.velocity.magnitude / 10f) * .8f) + .2f;
@@ -246,7 +255,8 @@ public class PlayerMovement : MonoBehaviour {
         deadPart.Play();
 
         //NewSound
-        AudioDirector.Instance.PlaySound(AudioDirector.Instance.gameOverSound, false, 0f, AudioDirector.Instance.gameOverVolume, 0f, true);
+        FMODUnity.RuntimeManager.PlayOneShot(gameoverSound);
+        //AudioDirector.Instance.PlaySound(AudioDirector.Instance.gameOverSound, false, 0f, AudioDirector.Instance.gameOverVolume, 0f, true);
         //SetSnapshot
         AudioDirector.Instance.gameOverSnapshot.TransitionTo(1f);
 
@@ -278,8 +288,19 @@ public class PlayerMovement : MonoBehaviour {
             //jumping
 
             //NewSound
-            FMODUnity.RuntimeManager.PlayOneShot(jumpSound);
+            //FMODUnity.RuntimeManager.PlayOneShot(jumpSound);
             //AudioDirector.Instance.PlaySound(AudioDirector.Instance.jumpSound, true, transform.position.x, AudioDirector.Instance.jumpVolume, 0.1f);
+            jumpInstance.setParameterByID(jumpSoundStrengthID, Random.Range(0F,1F));
+            if (jumpInstance.isValid())
+            {
+                FMOD.Studio.PLAYBACK_STATE playbackstate;
+                jumpInstance.getPlaybackState(out playbackstate);
+                if (playbackstate == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+                {
+                    jumpInstance.start();
+                }
+            }
+
 
             jumpDust.Play();
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);

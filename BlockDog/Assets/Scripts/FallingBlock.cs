@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using FMODUnity;
 public class FallingBlock : MonoBehaviour {
     public bool inGrid;
     public bool pickedUp;
@@ -17,9 +17,9 @@ public class FallingBlock : MonoBehaviour {
     public ColorWiggler wigl;
     Color baseColor;
     public float dontPushAgainTimer;
+    public FMODUnity.EventReference blocklandSound;
 
-
-	void Start () {
+    void Start () {
         rb = GetComponent<Rigidbody2D>();
         //colNum = 
         spr.color = Global.me.blockColors[colNum];
@@ -103,7 +103,8 @@ public class FallingBlock : MonoBehaviour {
             }
 
             //NewSound
-            AudioDirector.Instance.PlaySound(AudioDirector.Instance.blockImpact, true, transform.position.x, AudioDirector.Instance.blockLandVolume, 0.2f);
+            FMODUnity.RuntimeManager.PlayOneShot(blocklandSound);
+            //AudioDirector.Instance.PlaySound(AudioDirector.Instance.blockImpact, true, transform.position.x, AudioDirector.Instance.blockLandVolume, 0.2f);
 
         }
         if (coll.gameObject.tag == "Player" && coll.gameObject.transform.position.y < transform.position.y - .5f && prevVel.y < -14f) {
