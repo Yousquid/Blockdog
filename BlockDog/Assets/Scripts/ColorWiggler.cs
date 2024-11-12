@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using FMODUnity;
 public class ColorWiggler : MonoBehaviour {
     SpriteRenderer spr;
     public Color baseColor;
@@ -10,7 +10,8 @@ public class ColorWiggler : MonoBehaviour {
     public float colorBand = .1f;
     public Camera cam;
     public TextMesh txt;
-	void Start () {
+    public FMODUnity.EventReference blocklandSound;
+    void Start () {
         //colorBand = .1f;
         if (cam != null) {
             baseColor = cam.backgroundColor;
@@ -41,5 +42,18 @@ public class ColorWiggler : MonoBehaviour {
             wiggleTimer -= wiggleRate;
             //Debug.Log("wiggling");
         }
+
+
+        
+
 	}
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == 9)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(blocklandSound);
+        }
+    }
+
 }
