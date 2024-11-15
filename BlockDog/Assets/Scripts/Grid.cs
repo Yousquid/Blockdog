@@ -25,7 +25,8 @@ public class Grid : MonoBehaviour {
     public FMODUnity.EventReference preparSound;
     public FMODUnity.EventReference blockdropSound;
     public FMODUnity.EventReference gamestartSound;
-    
+    public FMODUnity.EventReference blockeliminateSound;
+    public bool matchSoundplay;
 
     FMOD.Studio.EventInstance dropInstance;
     FMOD.Studio.PARAMETER_ID dropStrengthID;
@@ -72,7 +73,11 @@ public class Grid : MonoBehaviour {
         }
         highScoreText.text = "\n" + num;
         SpawnWallColliders();
-	}
+
+       
+
+
+    }
 
     public void SpawnWallColliders() {
         GameObject bloop = Instantiate(wallCollider, (ToWorld(Vector2.zero) + ToWorld(new Vector2(0, gridHeight-1))) / 2, Quaternion.identity);
@@ -179,7 +184,7 @@ public class Grid : MonoBehaviour {
             }
         }
 
-
+       
         yield return new WaitForSeconds(.2f);
         Destroy(bloop);
     }
@@ -330,6 +335,7 @@ public class GridCell
         startFlag = true;
         neighbs = new GridCell[4];
         blowUpFlag = false;
+
     }
 
     public void BlowUp() {

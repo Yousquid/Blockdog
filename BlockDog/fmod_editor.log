@@ -7,17 +7,907 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000002041256FD08 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000002948C927898 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 27488
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 6656
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000FE200BF358
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFCDFF93CE0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFCDFF93CA0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFCDFF93DC0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFCDFF93E80
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000293CA0914E8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='land_new', format=5, channels=2, frequency=48000, lengthbytes=4768, lengthpcm=240000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.672966.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000FE200BF358
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFCDFF93CE0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFCDFF93CA0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFCDFF93DC0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFCDFF93E80
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000293CA08E158
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='block_preparation', format=5, channels=2, frequency=48000, lengthbytes=6944, lengthpcm=240000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300396.
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Affinity: 0x4000000000000003, Priority: 0xFFFF7FFC, Stack Size: 114688, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486106E48, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486106E48
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293A6FEA310
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFC, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486106E48
+[LOG] SoundI::release                          : block_land (0000029486106E48)
+[LOG] SoundI::release                          :     block_land (000002945818C678)
+[LOG] SoundI::release                          :     block_land (0000029486105F18)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486106FF8, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486106FF8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293CA8B0570
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486106FF8
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 27488
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 6656
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000FE200BF358
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFCDFF93CE0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFCDFF93CA0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFCDFF93DC0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFCDFF93E80
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002948E8BBCD8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='pick_up', format=5, channels=2, frequency=48000, lengthbytes=3168, lengthpcm=58761, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.477589.
+[LOG] SoundI::release                          : block_land (0000029486106FF8)
+[LOG] SoundI::release                          :     block_land (000002945818C678)
+[LOG] SoundI::release                          :     block_land (00000294861071A8)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 27488
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 6656
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000FE200BF358
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFCDFF93CE0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFCDFF93CA0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFCDFF93DC0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFCDFF93E80
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002948E8BD598
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='throw', format=5, channels=2, frequency=48000, lengthbytes=3424, lengthpcm=58761, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.487958.
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000294861071A8, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000294861071A8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293CA8B0CF0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000294861071A8
+[LOG] SoundI::release                          : block_land (00000294861071A8)
+[LOG] SoundI::release                          :     block_land (000002945E1AAB98)
+[LOG] SoundI::release                          :     block_land (00000294861076B8)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486107F28, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486107F28
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293CA8B0A70
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486107F28
+[LOG] SoundI::release                          : block_land (0000029486107F28)
+[LOG] SoundI::release                          :     block_land (0000029485902C18)
+[LOG] SoundI::release                          :     block_land (0000029486106E48)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486107F28, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486107F28
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293CA8B0CF0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486107F28
+[LOG] SoundI::release                          : block_land (0000029486107F28)
+[LOG] SoundI::release                          :     block_land (000002945E1AA6B8)
+[LOG] SoundI::release                          :     block_land (0000029486106FF8)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486105F18, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486105F18
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293CA8B0430
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486105F18
+[LOG] SoundI::release                          : block_land (0000029486105F18)
+[LOG] SoundI::release                          :     block_land (00000293F3564888)
+[LOG] SoundI::release                          :     block_land (0000029486106E48)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486108438, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486108438
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293CA8B0BB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486108438
+[LOG] SoundI::release                          : block_land (0000029486108438)
+[LOG] SoundI::release                          :     block_land (00000293EBFEE6E8)
+[LOG] SoundI::release                          :     block_land (0000029486107868)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000294861076B8, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000294861076B8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293A6FEA6D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000294861076B8
+[LOG] SoundI::release                          : block_land (00000294861076B8)
+[LOG] SoundI::release                          :     block_land (00000293F35D9AA8)
+[LOG] SoundI::release                          :     block_land (0000029486107868)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486107D78, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486107D78
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293CA8B0A70
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486107D78
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486105198, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486105198
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293CA8B0BB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486105198
+[LOG] SoundI::release                          : block_land (0000029486107D78)
+[LOG] SoundI::release                          :     block_land (0000029485902C18)
+[LOG] SoundI::release                          :     block_land (0000029486106E48)
+[LOG] SoundI::release                          : block_land (0000029486105198)
+[LOG] SoundI::release                          :     block_land (00000293EBFF1AE8)
+[LOG] SoundI::release                          :     block_land (0000029486107358)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486107508, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486107508
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002948DB01860
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486107508
+[LOG] SoundI::release                          : block_land (0000029486107508)
+[LOG] SoundI::release                          :     block_land (00000293F357A838)
+[LOG] SoundI::release                          :     block_land (0000029486107A18)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000294861085E8, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000294861085E8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002939F341980
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000294861085E8
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486107A18, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486107A18
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002939F342EC0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486107A18
+[LOG] SoundI::release                          : block_land (00000294861085E8)
+[LOG] SoundI::release                          :     block_land (00000293F35D8DA8)
+[LOG] SoundI::release                          :     block_land (00000294861071A8)
+[LOG] SoundI::release                          : block_land (0000029486107A18)
+[LOG] SoundI::release                          :     block_land (00000293F35DB308)
+[LOG] SoundI::release                          :     block_land (0000029486107358)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486105348, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486105348
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293A7389630
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486105348
+[LOG] SoundI::release                          : block_land (0000029486105348)
+[LOG] SoundI::release                          :     block_land (000002945E1AA6B8)
+[LOG] SoundI::release                          :     block_land (0000029486106E48)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486104E38, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486104E38
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293CB5CBF50
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486104E38
+[LOG] SoundI::release                          : block_land (0000029486104E38)
+[LOG] SoundI::release                          :     block_land (000002945E1AAB98)
+[LOG] SoundI::release                          :     block_land (00000294861071A8)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486107D78, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486107D78
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293CB5CC1D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486107D78
+[LOG] SoundI::release                          : block_land (0000029486107D78)
+[LOG] SoundI::release                          :     block_land (000002945E1AAB98)
+[LOG] SoundI::release                          :     block_land (0000029486104E38)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000294861071A8, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000294861071A8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293A7389630
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000294861071A8
+[LOG] SoundI::release                          : block_land (00000294861071A8)
+[LOG] SoundI::release                          :     block_land (00000293F357E798)
+[LOG] SoundI::release                          :     block_land (0000029486104E38)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486106E48, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486106E48
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293CA8B07F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486106E48
+[LOG] SoundI::release                          : block_land (0000029486106E48)
+[LOG] SoundI::release                          :     block_land (00000293F3579658)
+[LOG] SoundI::release                          :     block_land (0000029486106FF8)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486107868, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486107868
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002948DB015E0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486107868
+[LOG] SoundI::release                          : block_land (0000029486107868)
+[LOG] SoundI::release                          :     block_land (000002945E1AAB98)
+[LOG] SoundI::release                          :     block_land (0000029486108438)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486105198, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486105198
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002948DB01360
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486105198
+[LOG] SoundI::release                          : block_land (0000029486105198)
+[LOG] SoundI::release                          :     block_land (000002945E1AAB98)
+[LOG] SoundI::release                          :     block_land (0000029486107D78)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486107868, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486107868
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293C9DB0450
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486107868
+[LOG] SoundI::release                          : block_land (0000029486107868)
+[LOG] SoundI::release                          :     block_land (000002945E1AAB98)
+[LOG] SoundI::release                          :     block_land (0000029486105F18)
+[WRN] ObjectLookup::get                        : Lookup failed for EventModel: {00000000-0000-0000-0000-000000000000}
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000FE200BF358
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFCDFF93CE0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFCDFF93CA0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFCDFF93DC0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFCDFF93E80
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000029414A86358
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='block_eliminate', format=5, channels=2, frequency=48000, lengthbytes=10912, lengthpcm=240000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 26144
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 3552
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000FE200BF358
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFCDFF93CE0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFCDFF93CA0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFCDFF93DC0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFCDFF93E80
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000029414A871C8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='score_increase', format=5, channels=2, frequency=48000, lengthbytes=5280, lengthpcm=240000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.547936.
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486105BB8, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486105BB8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293C9DB01D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486105BB8
+[LOG] SoundI::release                          : block_land (0000029486105BB8)
+[LOG] SoundI::release                          :     block_land (000002945E1AAB98)
+[LOG] SoundI::release                          :     block_land (00000294861071A8)
+[WRN] ObjectLookup::get                        : Lookup failed for EventModel: {00000000-0000-0000-0000-000000000000}
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486106FF8, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486106FF8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293C9DB01D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486106FF8
+[LOG] SoundI::release                          : block_land (0000029486106FF8)
+[LOG] SoundI::release                          :     block_land (00000293F35DD048)
+[LOG] SoundI::release                          :     block_land (0000029486107D78)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000294861056A8, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000294861056A8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293C9DB0590
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000294861056A8
+[LOG] SoundI::release                          : block_land (00000294861056A8)
+[LOG] SoundI::release                          :     block_land (00000293F35D9428)
+[LOG] SoundI::release                          :     block_land (0000029486105858)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486105F18, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486105F18
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293C9DB01D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486105F18
+[LOG] SoundI::release                          : block_land (0000029486105F18)
+[LOG] SoundI::release                          :     block_land (00000293F35DA608)
+[LOG] SoundI::release                          :     block_land (00000294861071A8)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486105858, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486105858
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293CA8B0570
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486105858
+[LOG] SoundI::release                          : block_land (0000029486105858)
+[LOG] SoundI::release                          :     block_land (00000293F35D8C08)
+[LOG] SoundI::release                          :     block_land (00000294861071A8)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486106FF8, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486106FF8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293CA8B0570
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486106FF8
+[LOG] SoundI::release                          : block_land (0000029486106FF8)
+[LOG] SoundI::release                          :     block_land (00000293F35DCD08)
+[LOG] SoundI::release                          :     block_land (0000029486107508)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486107358, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486107358
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002945E2CE520
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486107358
+[LOG] SoundI::release                          : block_land (0000029486107358)
+[LOG] SoundI::release                          :     block_land (00000293F35DC9C8)
+[LOG] SoundI::release                          :     block_land (0000029486108438)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486107D78, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486107D78
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002945E2CE3E0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486107D78
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000294861056A8, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000294861056A8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002945E2CE520
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000294861056A8
+[LOG] SoundI::release                          : block_land (0000029486107D78)
+[LOG] SoundI::release                          :     block_land (00000293F35DB988)
+[LOG] SoundI::release                          :     block_land (00000294861071A8)
+[LOG] SoundI::release                          : block_land (00000294861056A8)
+[LOG] SoundI::release                          :     block_land (00000293F35DC1A8)
+[LOG] SoundI::release                          :     block_land (0000029486108438)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486107A18, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486107A18
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002945E2CE3E0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486107A18
+[LOG] SoundI::release                          : block_land (0000029486107A18)
+[LOG] SoundI::release                          :     block_land (00000293F3579998)
+[LOG] SoundI::release                          :     block_land (0000029486105858)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486106FF8, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486106FF8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002945E2CE3E0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486106FF8
+[LOG] SoundI::release                          : block_land (0000029486106FF8)
+[LOG] SoundI::release                          :     block_land (000002948C78D8E8)
+[LOG] SoundI::release                          :     block_land (0000029486107A18)
+[WRN] ObjectLookup::get                        : Lookup failed for EventModel: {00000000-0000-0000-0000-000000000000}
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486107F28, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486107F28
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293CA8B07F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486107F28
+[LOG] SoundI::release                          : block_land (0000029486107F28)
+[LOG] SoundI::release                          :     block_land (0000029485902C18)
+[LOG] SoundI::release                          :     block_land (0000029486107868)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486106E48, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486106E48
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293CA8B0A70
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486106E48
+[LOG] SoundI::release                          : block_land (0000029486106E48)
+[LOG] SoundI::release                          :     block_land (00000293F35D9F88)
+[LOG] SoundI::release                          :     block_land (0000029486105BB8)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486107508, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486107508
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293CA8B0570
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486107508
+[LOG] SoundI::release                          : block_land (0000029486107508)
+[LOG] SoundI::release                          :     block_land (000002948F0126E8)
+[LOG] SoundI::release                          :     block_land (0000029486106FF8)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486105198, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486105198
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293CA8B0A70
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486105198
+[WRN] ObjectLookup::get                        : Lookup failed for EventModel: {00000000-0000-0000-0000-000000000000}
+[LOG] SoundI::release                          : block_land (0000029486105198)
+[LOG] SoundI::release                          :     block_land (00000293F35DA468)
+[LOG] SoundI::release                          :     block_land (0000029486107508)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000294861071A8, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000294861071A8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293CA8B07F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000294861071A8
+[LOG] SoundI::release                          : block_land (00000294861071A8)
+[LOG] SoundI::release                          :     block_land (000002945E1AAB98)
+[LOG] SoundI::release                          :     block_land (0000029486106E48)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486105F18, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486105F18
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293CA8B0430
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486105F18
+[LOG] SoundI::release                          : block_land (0000029486105F18)
+[LOG] SoundI::release                          :     block_land (000002945E1AAB98)
+[LOG] SoundI::release                          :     block_land (0000029486106FF8)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486107358, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486107358
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293CA8B0430
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486107358
+[LOG] SoundI::release                          : block_land (0000029486107358)
+[LOG] SoundI::release                          :     block_land (000002945E1AAD38)
+[LOG] SoundI::release                          :     block_land (0000029486107508)
+[WRN] ObjectLookup::get                        : Lookup failed for EventModel: {00000000-0000-0000-0000-000000000000}
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000294861071A8, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000294861071A8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293CA8B0A70
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000294861071A8
+[LOG] SoundI::release                          : block_land (00000294861071A8)
+[LOG] SoundI::release                          :     block_land (00000293F357B1F8)
+[LOG] SoundI::release                          :     block_land (0000029486107A18)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486105D68, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486105D68
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293CA8B0CF0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486105D68
+[LOG] SoundI::release                          : block_land (0000029486105D68)
+[LOG] SoundI::release                          :     block_land (00000293F3579B38)
+[LOG] SoundI::release                          :     block_land (0000029486105348)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029486107D78, queue head = 00000294144739E8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029486107D78
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/FMOD Sound Assets/Build/Desktop/Blocks.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 43840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7232
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000293CA8B0430
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='block_land', format=5, channels=2, frequency=48000, lengthbytes=5536, lengthpcm=488217, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.300243.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029486107D78
+[LOG] SoundI::release                          : block_land (0000029486107D78)
+[LOG] SoundI::release                          :     block_land (00000293F357B1F8)
+[LOG] SoundI::release                          :     block_land (00000294861056A8)
+[LOG] SoundI::release                          :  (00000293CA856398)
+[LOG] SoundI::release                          :     block_eliminate (000002945AE51888)
+[LOG] SoundI::release                          :  (000002945E8D9B98)
+[LOG] SoundI::release                          :     block_preparation (00000293F357B058)
+[LOG] SoundI::release                          :  (0000029486ACD288)
+[LOG] SoundI::release                          :     block_drop (00000293EC2EFE38)
+[LOG] SoundI::release                          :  (0000029486ACCCC8)
+[LOG] SoundI::release                          :     walking_light (00000293EC2EFC98)
+[LOG] SoundI::release                          :  (0000029486ACCE38)
+[LOG] SoundI::release                          :     waling_lite_real (00000293EC2EFFD8)
+[LOG] SoundI::release                          :  (0000029486ACC9E8)
+[LOG] SoundI::release                          :     pick_up (0000029485902258)
+[LOG] SoundI::release                          :  (0000029486ACCFA8)
+[LOG] SoundI::release                          :     throw (0000029485902598)
+[LOG] SoundI::release                          :  (000002945E8D9468)
+[LOG] SoundI::release                          :     land_new (00000293F357C238)
+[LOG] SoundI::release                          :  (0000029486ACD568)
+[LOG] SoundI::release                          :     sticky_jump (00000293EC2EFAF8)
+[LOG] SoundI::release                          :  (0000029486ACD3F8)
+[LOG] SoundI::release                          :     start (0000029485902A78)
+[LOG] SoundI::release                          :  (00000293CA856DA8)
+[LOG] SoundI::release                          :     score_increase (000002948BD74588)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.

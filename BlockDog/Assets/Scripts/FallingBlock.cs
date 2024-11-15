@@ -18,14 +18,18 @@ public class FallingBlock : MonoBehaviour {
     Color baseColor;
     public float dontPushAgainTimer;
     public FMODUnity.EventReference impactSound;
-
+    public FMOD.Studio.EventInstance impactInstance;
+    public FMODUnity.EventReference matchSound;
+    public FMODUnity.EventReference scoreSound;
 
     void Start () {
+       
         rb = GetComponent<Rigidbody2D>();
         //colNum = 
         spr.color = Global.me.blockColors[colNum];
         rb.useFullKinematicContacts = true;
         baseColor = spr.color;
+        impactInstance = FMODUnity.RuntimeManager.CreateInstance(impactSound);
     }
 
 	
@@ -88,6 +92,8 @@ public class FallingBlock : MonoBehaviour {
         partSys.transform.parent = null;
         partSys.Play();
         colNum = -1;
+        FMODUnity.RuntimeManager.PlayOneShot(matchSound);
+        FMODUnity.RuntimeManager.PlayOneShot(scoreSound);
         Destroy(gameObject);
     }
     private void OnCollisionEnter2D(Collision2D coll) {
@@ -103,7 +109,16 @@ public class FallingBlock : MonoBehaviour {
 
             }
 
-            FMODUnity.RuntimeManager.PlayOneShot(impactSound);
+            if (impactInstance.isValid())
+            {
+                FMOD.Studio.PLAYBACK_STATE playbackstate;
+                impactInstance.getPlaybackState(out playbackstate);
+                if (playbackstate == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+                {
+                    impactInstance.start();
+                }
+            }
+
 
             //NewSound
 
