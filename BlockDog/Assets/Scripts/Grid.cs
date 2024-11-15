@@ -27,7 +27,8 @@ public class Grid : MonoBehaviour {
     public FMODUnity.EventReference gamestartSound;
     public FMODUnity.EventReference blockeliminateSound;
     public bool matchSoundplay;
-
+    public FMODUnity.EventReference dangerSound;
+    FMOD.Studio.EventInstance dangerInstance;
     FMOD.Studio.EventInstance dropInstance;
     FMOD.Studio.PARAMETER_ID dropStrengthID;
 
@@ -40,20 +41,7 @@ public class Grid : MonoBehaviour {
     }
     void Start () {
 
-        dropInstance = FMODUnity.RuntimeManager.CreateInstance(blockdropSound);
-
-        FMOD.Studio.EventDescription jumpSoundDescription;
-        dropInstance.getDescription(out jumpSoundDescription);
-        FMOD.Studio.PARAMETER_DESCRIPTION jumpSoundStrengthPramaterDescription;
-        jumpSoundDescription.getParameterDescriptionByName("Drop_Volume", out jumpSoundStrengthPramaterDescription);
-        dropStrengthID = jumpSoundStrengthPramaterDescription.id;
-
-        warningLoopOn = false;
-        playedGameOverSound = false;
-
-        //NewSound
-        FMODUnity.RuntimeManager.PlayOneShot(gamestartSound);
-        //AudioDirector.Instance.PlaySound(AudioDirector.Instance.gameStartSound, false, 0f, AudioDirector.Instance.gameStartVolume, 0f, true);
+        
 
         baseDropRate = dropRate;
         grid = new GridCell[gridHeight, gridWidth];
@@ -74,8 +62,23 @@ public class Grid : MonoBehaviour {
         highScoreText.text = "\n" + num;
         SpawnWallColliders();
 
-       
+        dropInstance = FMODUnity.RuntimeManager.CreateInstance(blockdropSound);
 
+        FMOD.Studio.EventDescription jumpSoundDescription;
+        dropInstance.getDescription(out jumpSoundDescription);
+        FMOD.Studio.PARAMETER_DESCRIPTION jumpSoundStrengthPramaterDescription;
+        jumpSoundDescription.getParameterDescriptionByName("Drop_Volume", out jumpSoundStrengthPramaterDescription);
+        dropStrengthID = jumpSoundStrengthPramaterDescription.id;
+
+        warningLoopOn = false;
+        playedGameOverSound = false;
+
+        //NewSound
+        FMODUnity.RuntimeManager.PlayOneShot(gamestartSound);
+        //AudioDirector.Instance.PlaySound(AudioDirector.Instance.gameStartSound, false, 0f, AudioDirector.Instance.gameStartVolume, 0f, true);
+
+
+        dangerInstance = FMODUnity.RuntimeManager.CreateInstance(dangerSound);
 
     }
 
@@ -263,6 +266,7 @@ public class Grid : MonoBehaviour {
 
                     //NewSound
                     //Turn warning loop off
+                    dangerInstance.stop(0f);
                     AudioDirector.Instance.FadeOutAudio(AudioDirector.Instance.dangerSource, 0.15f);
 
                     EndGame();
@@ -276,6 +280,15 @@ public class Grid : MonoBehaviour {
             //fade in warning loop, if it's not already
             if (!warningLoopOn)
             {
+                if (dangerInstance.isValid())
+                {
+                    FMOD.Studio.PLAYBACK_STATE playbackstate;
+                    dangerInstance.getPlaybackState(out playbackstate);
+                    if (playbackstate == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+                    {
+                        dangerInstance.start();
+                    }
+                }
                 Debug.Log("play warning sound??");
                 AudioDirector.Instance.FadeInAudio(
                     AudioDirector.Instance.dangerSource,
@@ -290,6 +303,8 @@ public class Grid : MonoBehaviour {
 
             Debug.Log(" fade out warning sound ");
             //turn warning loop off when no longer in danger
+            dangerInstance.stop(0f);
+
             AudioDirector.Instance.FadeOutAudio(
                     AudioDirector.Instance.dangerSource,
                     0.5f);

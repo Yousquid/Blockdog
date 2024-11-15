@@ -57,7 +57,7 @@ public class AudioDirector : MonoBehaviour
     [Range(0f, 1f)] public float throwVolume = 1.0f;
     [Space(10)] 
     public AudioClip landSound;
-    [Range(0f, 1f)] public float landVolume = 1.0f;
+    [Range(0f, 1f)] public float landVolume = 1.0f; 
 
     [Header("Block Action Sound Effects")] public AudioClip blockPrepareDrop;
     [Range(0f, 1f)] public float blockPrepVolume = 1.0f;
