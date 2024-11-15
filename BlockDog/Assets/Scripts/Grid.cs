@@ -24,6 +24,8 @@ public class Grid : MonoBehaviour {
     public GameObject wallCollider;
     public FMODUnity.EventReference preparSound;
     public FMODUnity.EventReference blockdropSound;
+    public FMODUnity.EventReference gamestartSound;
+    
 
     FMOD.Studio.EventInstance dropInstance;
     FMOD.Studio.PARAMETER_ID dropStrengthID;
@@ -49,7 +51,8 @@ public class Grid : MonoBehaviour {
         playedGameOverSound = false;
 
         //NewSound
-        AudioDirector.Instance.PlaySound(AudioDirector.Instance.gameStartSound, false, 0f, AudioDirector.Instance.gameStartVolume, 0f, true);
+        FMODUnity.RuntimeManager.PlayOneShot(gamestartSound);
+        //AudioDirector.Instance.PlaySound(AudioDirector.Instance.gameStartSound, false, 0f, AudioDirector.Instance.gameStartVolume, 0f, true);
 
         baseDropRate = dropRate;
         grid = new GridCell[gridHeight, gridWidth];
@@ -318,7 +321,7 @@ public class GridCell
     public GridCell[] neighbs;
     bool startFlag;
     public bool lookedAt;
-
+    public FMODUnity.EventReference blockeliminateSound;
     public GridCell (Vector2 _gridPos, Vector2 _worldPos, ref GridCell[,] grd) {
         gridPos = _gridPos;
         worldPos = _worldPos;
@@ -359,17 +362,19 @@ public class GridCell
         if (depth >= 3 && imADad) {
 
             //NewSound
-            AudioDirector.Instance.PlaySound(AudioDirector.Instance.matchSounds, false, 0, AudioDirector.Instance.matchVolume, 0, true);
-
+            FMODUnity.RuntimeManager.PlayOneShot(blockeliminateSound);
+            //AudioDirector.Instance.PlaySound(AudioDirector.Instance.matchSounds, false, 0, AudioDirector.Instance.matchVolume, 0, true);
+            
             BlowUp();
         }
-
+       
         return depth;
     }
 
     
 
     public void Update() {
+        
         goodNeighbs = 0;
         lookedAt = false;
         if (startFlag && color != -2) {

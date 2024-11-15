@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{0754cae4-56fc-4552-9fa4-c1463da9bdf6}">
+		<property name="assetPath">
+			<value>waling_lite_real.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{05e11bf5-6356-4eb3-8ca8-30487fcaea2b}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour {
     public float airDrag;
     public float floorForce;
     public float airForce;
+    public bool onGround;
     bool jumpFlag;
     bool onFloor;
     int floorObjs;
@@ -64,8 +65,13 @@ public class PlayerMovement : MonoBehaviour {
     public FMODUnity.EventReference throwSound;
     public FMODUnity.EventReference landSound;
     public FMODUnity.EventReference gameoverSound;
+    public FMODUnity.EventReference deadSound;
+    public FMODUnity.EventReference walkingSound;
     FMOD.Studio.EventInstance jumpInstance;
     FMOD.Studio.PARAMETER_ID jumpSoundStrengthID;
+
+    FMOD.Studio.EventInstance walkingInstance;
+    FMOD.Studio.PARAMETER_ID walkingStrengthID;
     void Start () {
         baseHeight = spr.transform.localScale.y;
         baseWidth = spr.transform.localScale.x;
@@ -73,13 +79,24 @@ public class PlayerMovement : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
         playedGameOverSound = false;
-        jumpInstance = FMODUnity.RuntimeManager.CreateInstance(jumpSound);
 
+
+        jumpInstance = FMODUnity.RuntimeManager.CreateInstance(jumpSound);
         FMOD.Studio.EventDescription jumpSoundDescription;
         jumpInstance.getDescription(out jumpSoundDescription);
         FMOD.Studio.PARAMETER_DESCRIPTION jumpSoundStrengthPramaterDescription;
         jumpSoundDescription.getParameterDescriptionByName("Jump_Strength", out jumpSoundStrengthPramaterDescription);
         jumpSoundStrengthID = jumpSoundStrengthPramaterDescription.id;
+
+        walkingInstance = FMODUnity.RuntimeManager.CreateInstance(walkingSound);
+
+        FMOD.Studio.EventDescription walkingSoundDescription;
+        walkingInstance.getDescription(out walkingSoundDescription);
+        FMOD.Studio.PARAMETER_DESCRIPTION walkingSoundStrengthPramaterDescription;
+        walkingSoundDescription.getParameterDescriptionByName("Walking_change", out walkingSoundStrengthPramaterDescription);
+        walkingStrengthID = walkingSoundStrengthPramaterDescription.id;
+
+
     }
 	
 	void Update () {
@@ -101,6 +118,7 @@ public class PlayerMovement : MonoBehaviour {
             if (gameOverInputTimer > 1f) {
                 if (Input.GetKeyDown(jumpButton)) {
 
+                    walkingInstance.stop(0f);
                     //NewSound
                     AudioDirector.Instance.gameplaySnapshot.TransitionTo(1.0f);
 
@@ -123,6 +141,7 @@ public class PlayerMovement : MonoBehaviour {
         spr.transform.localScale = new Vector3(baseWidth * (2f - height), baseHeight * height, 1);
 
 		if (Input.GetKeyDown(jumpButton) && onFloor) {
+            walkingInstance.stop(0f);
             jumpFlag = true;
         }
         PlaceDot();
@@ -255,6 +274,7 @@ public class PlayerMovement : MonoBehaviour {
         deadPart.Play();
 
         //NewSound
+        FMODUnity.RuntimeManager.PlayOneShot(deadSound);
         FMODUnity.RuntimeManager.PlayOneShot(gameoverSound);
         //AudioDirector.Instance.PlaySound(AudioDirector.Instance.gameOverSound, false, 0f, AudioDirector.Instance.gameOverVolume, 0f, true);
         //SetSnapshot
@@ -306,17 +326,46 @@ public class PlayerMovement : MonoBehaviour {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             wiggleSpd += .1f;
         }
-        if (grabbedBlock != null) {
+        if (grabbedBlock != null)
+        {
+
+            walkingInstance.setParameterByID(walkingStrengthID, 1);
+
             grabbedBlock.transform.position = transform.TransformPoint(new Vector2(0, 1.5f));
         }
+        else { walkingInstance.setParameterByID(walkingStrengthID, 0); }
         //this is variable jump height
         if (Input.GetKeyUp(jumpButton) && rb.velocity.y >= 0 && !blockJumped) {
+            walkingInstance.stop(0f);
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y - jumpAggro, 0));
         }
 
+        if (Input.GetKey(left) || Input.GetKey(right))
+        {
+            if (onFloor)
+            {
+                
+
+                if (walkingInstance.isValid())
+                {
+                    FMOD.Studio.PLAYBACK_STATE playbackstate;
+                    walkingInstance.getPlaybackState(out playbackstate);
+                    if (playbackstate == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+                    {
+                        walkingInstance.start();
+                    }
+                }
+            }
+        }
+        else {
+            walkingInstance.stop(0f);
+            }
+
+
         //turn key input into a direction (either 1, 0 or -1)
         int goDir = 0;
-        if (Input.GetKey(left)) { goDir--; }
+        if (Input.GetKey(left)) { goDir--; 
+        }
         if (Input.GetKey(right)) { goDir++; }
         if (goDir != 0) { facing = goDir;}
         //Quadratic drag
@@ -369,6 +418,13 @@ public class PlayerMovement : MonoBehaviour {
                 
             }
         }
+
+        if (coll != null)
+        {
+            onGround = true;
+        }
+        else { onGround = false; }
+
     }
 
     /*

@@ -17,7 +17,8 @@ public class FallingBlock : MonoBehaviour {
     public ColorWiggler wigl;
     Color baseColor;
     public float dontPushAgainTimer;
-  
+    public FMODUnity.EventReference impactSound;
+
 
     void Start () {
         rb = GetComponent<Rigidbody2D>();
@@ -102,7 +103,8 @@ public class FallingBlock : MonoBehaviour {
 
             }
 
-           
+            FMODUnity.RuntimeManager.PlayOneShot(impactSound);
+
             //NewSound
 
             //AudioDirector.Instance.PlaySound(AudioDirector.Instance.blockImpact, true, transform.position.x, AudioDirector.Instance.blockLandVolume, 0.2f);
