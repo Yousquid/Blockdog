@@ -24,13 +24,21 @@ public class Grid : MonoBehaviour {
     public GameObject wallCollider;
     public FMODUnity.EventReference preparSound;
     public FMODUnity.EventReference blockdropSound;
+    
+    public FMODUnity.EventReference music_INS;
     public FMODUnity.EventReference gamestartSound;
     public FMODUnity.EventReference blockeliminateSound;
     public bool matchSoundplay;
     public FMODUnity.EventReference dangerSound;
+   
+
+
+
     FMOD.Studio.EventInstance dangerInstance;
     FMOD.Studio.EventInstance dropInstance;
     FMOD.Studio.PARAMETER_ID dropStrengthID;
+
+   
 
     //newAudio
     bool warningLoopOn = false;
@@ -79,6 +87,10 @@ public class Grid : MonoBehaviour {
 
 
         dangerInstance = FMODUnity.RuntimeManager.CreateInstance(dangerSound);
+
+
+      
+
 
     }
 
@@ -313,12 +325,15 @@ public class Grid : MonoBehaviour {
         }
     }
     void EndGame() {
+
+
         Debug.Log("overFilled");
         gameOver = true;
 
         //NewSound
         if (!playedGameOverSound)
         {
+            
             AudioDirector.Instance.PlaySound(AudioDirector.Instance.gameOverSound, false, 0f, AudioDirector.Instance.gameOverVolume, 0f, true);
             AudioDirector.Instance.gameOverSnapshot.TransitionTo(0.5f);
             playedGameOverSound = true;

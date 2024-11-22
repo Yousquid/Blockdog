@@ -67,12 +67,17 @@ public class PlayerMovement : MonoBehaviour {
     public FMODUnity.EventReference gameoverSound;
     public FMODUnity.EventReference deadSound;
     public FMODUnity.EventReference walkingSound;
+    public FMODUnity.EventReference music;
+    FMOD.Studio.EventInstance music_instance;
+    FMOD.Studio.PARAMETER_ID musicID;
+
     FMOD.Studio.EventInstance jumpInstance;
     FMOD.Studio.PARAMETER_ID jumpSoundStrengthID;
 
     FMOD.Studio.EventInstance walkingInstance;
     FMOD.Studio.PARAMETER_ID walkingStrengthID;
     void Start () {
+        music_instance.stop(0f);
         baseHeight = spr.transform.localScale.y;
         baseWidth = spr.transform.localScale.x;
         //ball = Global.me.ball;
@@ -96,6 +101,30 @@ public class PlayerMovement : MonoBehaviour {
         walkingSoundDescription.getParameterDescriptionByName("Walking_change", out walkingSoundStrengthPramaterDescription);
         walkingStrengthID = walkingSoundStrengthPramaterDescription.id;
 
+        music_instance = FMODUnity.RuntimeManager.CreateInstance(music);
+
+        FMOD.Studio.EventDescription musicDescription;
+        music_instance.getDescription(out musicDescription);
+        FMOD.Studio.PARAMETER_DESCRIPTION musicParameterDescription;
+        musicDescription.getParameterDescriptionByName("music", out musicParameterDescription);
+
+
+
+        musicID = musicParameterDescription.id;
+
+
+
+
+        music_instance.setParameterByID(musicID, 0);
+        if (music_instance.isValid())
+        {
+            FMOD.Studio.PLAYBACK_STATE playbackstate;
+            music_instance.getPlaybackState(out playbackstate);
+            if (playbackstate == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+            {
+                music_instance.start();
+            }
+        }
 
     }
 	
@@ -111,10 +140,14 @@ public class PlayerMovement : MonoBehaviour {
             if (!playedGameOverSound)
             {
                 AudioDirector.Instance.FadeOutAudio(AudioDirector.Instance.dangerSource, 0.15f);
+                
                 playedGameOverSound = true;
+
+                
             }
 
             gameOverInputTimer += Time.deltaTime;
+
             if (gameOverInputTimer > 1f) {
                 if (Input.GetKeyDown(jumpButton)) {
 
@@ -276,6 +309,8 @@ public class PlayerMovement : MonoBehaviour {
         //NewSound
         FMODUnity.RuntimeManager.PlayOneShot(deadSound);
         FMODUnity.RuntimeManager.PlayOneShot(gameoverSound);
+        music_instance.setParameterByID(musicID, 1);
+
         //AudioDirector.Instance.PlaySound(AudioDirector.Instance.gameOverSound, false, 0f, AudioDirector.Instance.gameOverVolume, 0f, true);
         //SetSnapshot
         AudioDirector.Instance.gameOverSnapshot.TransitionTo(1f);
@@ -310,6 +345,7 @@ public class PlayerMovement : MonoBehaviour {
             //NewSound
             //FMODUnity.RuntimeManager.PlayOneShot(jumpSound);
             //AudioDirector.Instance.PlaySound(AudioDirector.Instance.jumpSound, true, transform.position.x, AudioDirector.Instance.jumpVolume, 0.1f);
+
             jumpInstance.setParameterByID(jumpSoundStrengthID, Random.Range(0F,1F));
             if (jumpInstance.isValid())
             {
